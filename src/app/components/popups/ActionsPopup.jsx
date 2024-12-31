@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { DeleteIcon, EditIcon, ViewIcon } from "../common/Icons";
 import Link from "next/link";
@@ -14,13 +15,13 @@ const ActionsPopup = ({ userId, apiData, setApiData }) => {
   return (
     <div className="bg-white p-2.5 fixed z-10 shadow-lg max-w-[105px] flex flex-col gap-2">
       <Link
-        to={`details/${userId}`}
+        href={`details/${userId}`}
         className="font-normal text-sm text-[#000F02] flex gap-2 capitalize"
       >
         <ViewIcon /> view
       </Link>
       <Link
-        to={`update/${userId}`}
+        href={`update/${userId}`}
         className="font-normal text-sm text-[#000F02] flex gap-2 capitalize"
       >
         <EditIcon /> edit

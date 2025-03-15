@@ -17,14 +17,12 @@ const Sidebar = ({ setShowSideBar }) => {
   };
   return (
     <div id="sidebar" className=" top-0 sticky ">
-      <div className="bg-[#FFAE00] py-2.5 flex justify-center">
-        <Image src={logo} alt="logo" />
-      </div>
+      <div className="bg-[#FFAE00] py-2.5 flex justify-center">aMEETra</div>
       <div className="flex flex-col bg-[#3D464D] h-full mt-2">
         {sideBarData.map((item, index) => (
           <div key={index}>
             <Link
-            href={item.path  || "#"}
+              href={item.path || "#"}
               className="flex items-center justify-between px-5 py-3 gap-2.5 hover:bg-[#26313A] hover:rounded-l-[20px] w-full duration-300 icon cursor-pointer"
               onClick={() => {
                 handleDropdown(index);
@@ -49,7 +47,7 @@ const Sidebar = ({ setShowSideBar }) => {
               <div className="flex flex-col pl-10 ">
                 {item.subItems.map((subItem, subIndex) => (
                   <Link
-                  href={subItem.path  || "#"}
+                    href={subItem.path || "#"}
                     key={subIndex}
                     className="flex items-center px-5 py-2 gap-2.5 hover:bg-[#26313A] hover:rounded-l-[20px] w-full duration-300 icon"
                   >

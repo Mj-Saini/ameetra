@@ -3,8 +3,11 @@ import React, { useEffect, useState } from "react";
 import Sidebar from "@/app/components/common/Sidebar";
 import AdminHeader from "@/app/components/common/AdminHeader";
 import DashboardContent from "@/app/components/common/DashboardContent";
+import AllUsers from "@/app/components/AllUsers";
+import Notifications from "@/app/components/Notifications";
+import DashboardSettings from "@/app/components/DashboardSettings";
 
-const DashboardPage = () => {
+const Page = () => {
   const [showSideBar, setShowSideBar] = useState(false);
   useEffect(() => {
     if (showSideBar) {
@@ -37,13 +40,11 @@ const DashboardPage = () => {
               setShowSideBar={setShowSideBar}
             />
           </div>
-          {/* <div className="overflow-y-auto"> */}
-          <DashboardContent />
-          {/* </div> */}
+          <DashboardSettings />
         </div>
       </div>
     </div>
   );
 };
 
-export default DashboardPage;
+export default Page;

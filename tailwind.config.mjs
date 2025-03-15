@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -10,6 +11,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        parimary_clr: "#8944FF",
+      },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"], // Added font family
       },
     },
   },
